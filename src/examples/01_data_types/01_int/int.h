@@ -1,1 +1,4 @@
-//Create prototype for void function echo_variable with one int parameter
+/*
+Function echo_variable
+*/
+int echo_variable(int num);
