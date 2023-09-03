@@ -13,7 +13,6 @@ double add_to_double_1(double num1){
 /*
 Write code for function named add_to_double to add .3 5 times to incoming double parameter
 */
-//
 double add_to_double_2(double num1){
     
     double result = num1 + .3 + .3 + .3 + .3 + .3;
