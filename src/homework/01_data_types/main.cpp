@@ -1,4 +1,4 @@
-﻿//write include statements
+//write include statements
 #include<iostream>
 #include "data_types.h"
 
@@ -6,7 +6,8 @@
 //write namespace using statement for cout
 using std::cin; using std::cout;
 
-int main(){
+int main()
+{
 	auto num = 0;
 
     cout<<"Enter a number:";
@@ -21,8 +22,6 @@ int main(){
 	result = multiply_numbers(num1);
 
 	cout <<"Result is:"<<result<<"\n";
-
-	
 
 	return 0;
 }
