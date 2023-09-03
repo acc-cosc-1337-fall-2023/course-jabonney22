@@ -16,16 +16,16 @@ TEST_CASE("test echo_variable function", "function should return the same value 
 }
 
 /*test case add_to_double_1 with 0 as parameter*/
-//TEST_CASE("Test the add to double 1 function", "testing the decimal inconsistency") {
+TEST_CASE("Test the add to double 1 function", "testing the decimal inconsistency") {
 	
-//	REQUIRE(.9 == add_to_double_1(0));
+	REQUIRE(.9 == add_to_double_1(0));
 }
 
 /*test case add_to_double_1 with 1 as parameter*/
 
-//TEST_CASE("Test the add to double 2 function", "testing the decimal inconsistency") {
+TEST_CASE("Test the add to double 2 function", "testing the decimal inconsistency") {
 	
-//	REQUIRE(1.5 == add_to_double_2(0));
+	REQUIRE(1.5 == add_to_double_2(0));
 }
 
 /*test case add_to_double_2 with 0 as parameter*/
