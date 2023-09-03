@@ -14,7 +14,3 @@ int multiply_numbers(int num1) //1-b of Homework 1
 	return result;
 	
 }
-
-
-
-
