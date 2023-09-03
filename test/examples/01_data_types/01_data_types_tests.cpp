@@ -33,6 +33,12 @@ TEST_CASE("Test the add to double 2 function", "testing the decimal inconsistenc
 /*test case add_to_double_2 with 1 as parameter*/
 
 /*test case char test ASCII values */
+TEST_CASE("test the get_char ascii value function", "char to int conversion") {
+
+	REQUIRE(65 == get_char_ascii_value('A'));
+	REQUIRE(97 == get_char_ascii_value('a'));
+	REQUIRE(98 == get_char_ascii_value('b'));
+}
 
 /*test case string test ASCII values Joe characters are equal to 74, 111, and 101*/
 
