@@ -1,6 +1,7 @@
 #include<iostream>
+#include "char.h"
 
-using std:: cout;
+using std::cout;
 
 int main()
 {
@@ -8,7 +9,7 @@ int main()
 
     double ascii_value = get_char_ascii_value(letter);
 
-    cout<<"The ascii value for "<<letter" is "ascii_value"\n";
+    cout<<"The ascii value for "<<letter<<" is "<<ascii_value<<"\n";
     
     return 0;
 }
