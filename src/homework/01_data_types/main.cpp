@@ -6,8 +6,7 @@
 //write namespace using statement for cout
 using std::cin; using std::cout;
 
-int main()
-{
+int main(){
 	auto num = 0;
 
     cout<<"Enter a number:";
