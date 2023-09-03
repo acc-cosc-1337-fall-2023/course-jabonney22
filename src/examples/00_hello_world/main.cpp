@@ -1,9 +1,7 @@
 #include<iostream>
 
-using std ::cout;
-
 int main()
 {
-    cout<<"Hello World!\n";
+    std::cout<<"Hello World, Everyone!\n";
     return 0;
 }
