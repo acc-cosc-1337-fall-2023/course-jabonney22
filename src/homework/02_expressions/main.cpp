@@ -5,7 +5,7 @@
 
 int main()
 {
-	
+	name
 
 	return 0;
 }
