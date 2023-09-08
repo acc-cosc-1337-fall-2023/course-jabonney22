@@ -34,3 +34,8 @@ TEST_CASE("Test char is 1 byte w size of") {
 	REQUIRE(get_char_size('9') == 1);
 	REQUIRE(get_char_size('#') == 1);
 }
+
+TEST_CASE("Test program with constants-get area of circle") {
+
+	REQUIRE(get_area_of_circle(10) == 314.159);
+}
