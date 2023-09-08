@@ -1,4 +1,3 @@
-
 /*
 Function convert_int_to_double multiplies years times interest_rate
 
