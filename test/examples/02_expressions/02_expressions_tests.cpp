@@ -10,7 +10,7 @@ TEST_CASE("Verify Test Configuration", "verification") {
 
 TEST_CASE("Test convert int to double", "double takes precedence over int") {
 
-	REQUIRE(covnvert_to_double(10, .5) == 5.0);
+	REQUIRE(convert_to_double(10, .5) == 5.0);
 }
 
 TEST_CASE("Test convert double to int", "truncate the decimal portion") {
