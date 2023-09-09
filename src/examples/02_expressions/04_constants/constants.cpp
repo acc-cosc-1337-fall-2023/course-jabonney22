@@ -10,8 +10,7 @@ Create const double PI with 3.14159
 
 double get_area_of_circle(double radius){
 
-   
-    auto area = radius * radius *radius * PI
+    auto area = radius * radius * PI;
     return area;
 
 }
