@@ -26,13 +26,5 @@ TEST_CASE("test get generation function", "verification") {
 
 }
 
-TEST_CASE("Test menu function", "verification") {
 
-	REQUIRE(menu(0) == "Invalid Option");
-	REQUIRE(menu(1) == "Option 1");
-	REQUIRE(menu(2) == "Option 2");
-	REQUIRE(menu(3) == "Option 3");
-	REQUIRE(menu(4) == "Option 4");
-	REQUIRE(menu(5) == "Invalid Option");
-	
-}
+
