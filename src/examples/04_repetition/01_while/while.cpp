@@ -32,8 +32,8 @@ l
 0
 
 */
-void display_string(std::string str){
-
+void display_string(std::string str)
+{ 
     auto indx = 0;
 
     while(indx < str.size())
@@ -41,6 +41,6 @@ void display_string(std::string str){
         cout<<str[indx]<<"\n";
         indx++;
     }
-}
 
+}
 
