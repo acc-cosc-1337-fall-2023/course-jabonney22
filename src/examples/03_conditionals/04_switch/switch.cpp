@@ -2,6 +2,7 @@
 #include "switch.h"
 
 using std::string;
+using std::cin; using std::cout; using std::string;
 
 //Write code for function that accepts a num and returns a string 
 //as follows:
@@ -14,51 +15,45 @@ void menu()
 {
     display_menu();
     auto option = 0;
-    cout<<"Enter a menu Option\n";
+    cout<<"Enter a menu option\n";
     cin>>option;
 
     handle_menu_option(option);
 }
+
 void display_menu()
 {
-    cout<<"1-Option 1\n";
+  	cout<<"1-Option 1\n";
 	cout<<"2-Option 2\n";
 	cout<<"3-Option 3\n";
 	cout<<"4-Option 4\n";
 	cout<<"5-Exit\n";
 }
 
-void handle_menu_option(int num){
+void handle_menu_option(int num)
+{
+    string result;
 
-
-    switch(num){
-
-        case 1:
-            cout<<"Option 1";
-            break;
-        
-         case 2:
-            cout<<"Option 2";
-            break;
-
-        case 3:
-            cout<<"Option 3";
-            break;
-
-        case 4:
-            cout<<"Option 4";
-            break;
-
-        case 5:
-            cout<<"Program will exit";
-            break;
-
-        default:
-            result = "Invalid Option";
-            break;
+    switch(num)
+    {
+    case 1:
+        cout<<"Option 1\n";//call a function that does something
+        break;
+    case 2:
+        cout<<"Option 2\n";
+        break;
+    case 3:
+        cout<<"Option 3\n";
+        break;
+    case 4:
+        cout<<"Option 4\n";
+        break;
+    case 5:
+        cout<<"Program will exit\n";
+        break;
+    default:
+        cout<<"Invalid Option";
+        break;
     }
 
-    return result;
-
 }
-
