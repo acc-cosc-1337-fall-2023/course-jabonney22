@@ -5,8 +5,6 @@
 int sum_of_squares(int num);
 
 //write function prototype named display that accepts a string and returns void
-void display_string(std::string str){
+void display_string(std::string str);
 
-    str.size
-}
 
