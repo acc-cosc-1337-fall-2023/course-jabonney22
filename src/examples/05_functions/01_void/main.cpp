@@ -3,7 +3,6 @@
 
 using std::cout;
 
-
 int main()
 {
 
@@ -12,6 +11,6 @@ int main()
     value_param(num);
 
     cout<<"Num is:"<<num<<"\n";
-    
+
     return 0;
 }
