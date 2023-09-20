@@ -16,3 +16,11 @@ TEST_CASE("test function value param") {
 	REQUIRE(num == 10);
 }
 
+TEST_CASE("test function refrence parameter") {
+	
+	int num = 10;
+
+	ref_param(num);
+
+	
+}
