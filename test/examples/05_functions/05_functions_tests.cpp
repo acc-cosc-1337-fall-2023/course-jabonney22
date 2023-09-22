@@ -3,6 +3,7 @@
 #include "void.h"
 #include "val_ref.h"
 #include "static.h"
+#include "default.h"
 
 TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
@@ -51,4 +52,19 @@ TEST_CASE("test static_2 function", "value of num persists across function calls
 	REQUIRE(static_var_2() == 8);
 	
 	
+}
+
+TEST_CASE("test static_2 function", "value of num persists across function calls") {
+	
+	REQUIRE(static_var_2() == 6);
+	REQUIRE(static_var_2() == 7);
+	REQUIRE(static_var_2() == 8);
+	
+	
+}
+
+TEST_CASE("Test function overloads")
+{
+	REQUIRE(get_weekly_pay(52000) == 1000);
+	REQUIRE(get_weekly_pay(40, 25) == 1000);
 }
