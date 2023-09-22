@@ -50,6 +50,5 @@ TEST_CASE("test static_2 function", "value of num persists across function calls
 	REQUIRE(static_var_2() == 7);
 	REQUIRE(static_var_2() == 8);
 	
-
 	
 }
