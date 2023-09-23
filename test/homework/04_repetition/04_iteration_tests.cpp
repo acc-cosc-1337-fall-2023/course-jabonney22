@@ -19,3 +19,4 @@ TEST_CASE("test gcd ") {
 	REQUIRE(gcd(21, 28) == 7);
 	REQUIRE(gcd(25, 100) == 25);
 }
+

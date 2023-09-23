@@ -13,6 +13,7 @@ int main() {
     int number1;
     int number2;
     int result;
+    string input;
 
 do {
 
@@ -42,9 +43,59 @@ do {
         cin>>number2;
 
         result = gcd(number1 , number2);
-        cout<<"Greatest common divisor of "<<number1<<"and"<<number2<<" is: "<<result<<"\n";
+        cout<<"Greatest common divisor of "<<number1<<" and "<<number2<<" is: "<<result<<"\n";
     
     }
+
+    else if(option == 3){
+
+        cout<<"are you sure you want to exit?: ";
+        cin>>input;
+
+
+        if(input == "n" || "N"){
+
+            cout<<"Option"<<"\n";
+	        cout<<"1-Factorial"<<"\n";
+            cout<<"2-Greatest Common Divisor"<<"\n";
+	        cout<<"3-Exit" <<"\n";
+	        cout<<"Enter a value between 1-3: "<<"\n";
+	        cin>>option;
+
+            if (option == 1){
+
+                cout<<"Enter a number: ";
+                cin>>number;
+
+                result = factorial(number);
+                cout<<"Factorial of "<<number<<" is: "<<result<<"\n";
+    
+            }
+
+            else if(option == 2){
+
+            cout<<"Enter the first number: ";
+            cin>>number1;
+
+            cout<<"Enter the second number: ";
+            cin>>number2;
+
+            result = gcd(number1 , number2);
+            cout<<"Greatest common divisor of "<<number1<<" and "<<number2<<" is: "<<result<<"\n";
+    
+            }
+        }
+
+        else if(input == "y" || "Y"){
+
+            break;
+        }
+    }
+
+     else {
+
+		cout<<"Invalid Choice select 1, 2, or 3"<<"\n";
+	}
 
     break;
 
