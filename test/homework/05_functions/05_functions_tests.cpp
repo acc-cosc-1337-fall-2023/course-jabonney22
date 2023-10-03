@@ -8,10 +8,8 @@ TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
 }
 
-TEST_CASE("Verify get gc function") {
-
-	string str = "AGCTATAG";
-	get_gc_content(str);
-
-	REQUIRE(str == 37.5);
+TEST_CASE("Verify get_gc content function") {
+	REQUIRE(get_gc_content("AGCTATAG") == 37.5);
+	REQUIRE(get_gc_content("CGCTATAG") == 50.0);
+	
 }
