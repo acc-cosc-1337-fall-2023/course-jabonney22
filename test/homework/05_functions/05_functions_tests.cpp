@@ -13,3 +13,8 @@ TEST_CASE("Verify get_gc content function") {
 	REQUIRE(get_gc_content("CGCTATAG") == 50.0);
 	
 }
+
+TEST_CASE("Verify get_dna complement function"){
+	REQUIRE(get_dna_complement("AAAACCCGGT") == "TTTTGGGCCA");
+	REQUIRE(get_dna_complement("CCCGGAAAAT") == "GGGCCTTTTA");
+}

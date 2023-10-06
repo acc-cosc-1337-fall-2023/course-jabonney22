@@ -5,9 +5,10 @@
 
 
 using std:: string;
+using namespace std;
 
 //add function code here
-double get_gc_content(const std :: string& dna){
+double get_gc_content(const string& dna){
 
 
         double gc_count = 0;
@@ -16,7 +17,7 @@ double get_gc_content(const std :: string& dna){
 
         for (int i = 0; i < dna_sequence; i++) {
 
-            std::string::value_type dna_base = dna[i];
+            string::value_type dna_base = dna[i];
 
             if ( dna_base == 'G' || dna_base == 'C') {
                 gc_count++;
@@ -28,34 +29,28 @@ double get_gc_content(const std :: string& dna){
     return gc_content;
 }
 
-//std :: string get_dna_complement(string dna){
-//string reverse_complement = "";
+string get_dna_complement(string dna){
 
-  //  for (int i = dna.length() - 1; i >= 0; i--) {
-    //    char base = dna[i];
-      //  char complement;
+  string complement = dna;
+  int length = dna.length();
 
-        //switch (base) {
-          //  case 'A':
-            //    complement = 'T';
-              //  break;
-            //case 'T':
-            //    complement = 'A';
-            //    break;
-            //case 'C':
-            //    complement = 'G';
-            //    break;
-            //case 'G':
-            //    complement = 'C';
-            //    break;
-            //default:
-                
-            //    complement = base;
-            //    break;
-       // }
+    for (int i = 0; i < length / 2; i++) {
+        swap(complement[i], complement[length - i - 1]);
+    }
+    for (int i = 0; i < length; i++) {
+        if (complement[i] == 'A') {
+            complement[i] = 'T';
+        } else if (complement[i] == 'T') {
+            complement[i] = 'A';
+        } else if (complement[i] == 'C') {
+            complement[i] = 'G';
+        } else if (complement[i] == 'G') {
+            complement[i] = 'C';
+        }
 
-      //  reverse_complement += complement;
-   // }
+    }
 
- //   return reverse_complement;
-//}
+    return complement;
+
+ 
+ }
