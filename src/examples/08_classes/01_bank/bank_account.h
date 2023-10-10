@@ -16,3 +16,5 @@ private:// access specifier-onlly this class can access function or varaibles th
     int balance{0}; //intialize to zero; happens first
 
 };
+
+void say_hello();

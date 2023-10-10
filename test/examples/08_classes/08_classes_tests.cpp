@@ -65,3 +65,4 @@ TEST_CASE("Test account deposit and withdraw")
 	account.withdraw(100);
 	REQUIRE(account.get_balance() == 1000);
 }
+
