@@ -2,20 +2,24 @@
 #include "catch.hpp"
 #include "func.h"
 
-using std :: string;
-
 TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
 }
 
-TEST_CASE("Verify get_gc content function") {
-	REQUIRE(get_gc_content("AGCTATAG") == 37.5);
-	REQUIRE(get_gc_content("CGCTATAG") == 50.0);
-	
+TEST_CASE("Test get gc content")
+{
+	REQUIRE((get_gc_content("AGCTATAG")*1000) == (.375*1000));
+	REQUIRE((get_gc_content("CGCTATAG")*10) == (.5*10));
 }
 
-TEST_CASE("Verify get_dna complement function"){
-	REQUIRE(get_dna_complement("AAAACCCGGT") == "TTTTGGGCCA");
-	REQUIRE(get_dna_complement("CCCGGAAAAT") == "GGGCCTTTTA");
+TEST_CASE("Test reverse string")
+{
+	REQUIRE(get_reverse_string("AGCTATAG") == "GATATCGA");
+	REQUIRE(get_reverse_string("CGCTATAG") == "GATATCGC");
 }
 
+TEST_CASE("Test get dna complement")
+{
+	REQUIRE(get_dna_complement("AAAACCCGGT") == "ACCGGGTTTT");
+	REQUIRE(get_dna_complement("CCCGGAAAAT") == "ATTTTCCGGG");
+}
