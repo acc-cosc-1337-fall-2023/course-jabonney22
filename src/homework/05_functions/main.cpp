@@ -6,9 +6,9 @@ using std::cin; using std::cout; using std::string;
 int main() 
 {
 	int option;
-    std :: string dna;
+    string dna;
     int result;
-    string complement = dna_sequence;
+    char complement = dna_sequence;
 
 	if (option == 1){
 
@@ -24,7 +24,7 @@ int main()
         cout<<"Enter a DNA string: ";
         cin>>dna;
 
-        result = get_dna_complement(dna);
+        result = get_dna_complement(dna_sequence);
         cout<<"The complement of the DNA "<<dna<<" is: "<<result<<"\n";
 
     }
