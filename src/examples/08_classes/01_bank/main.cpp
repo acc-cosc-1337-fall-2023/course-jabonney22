@@ -17,6 +17,9 @@ int main()
 	BankAccount account2; //customer 2
 
 	cout<<"Balance: "<<account2.get_balance()<<"\n"; 
+
+	show_balance(account);
+
 	return 0;
 }
 
