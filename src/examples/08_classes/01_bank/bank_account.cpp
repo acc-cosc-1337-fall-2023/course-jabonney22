@@ -17,6 +17,11 @@ void BankAccount::withdraw(int amount)
     }
 }
 
+void BankAccount::get_balance_from_db(){
+
+    balance = rand() % 100000 + 1;
+}
+
 
 
 //NOT PART OF THE BANK ACCOUNT CLASS
@@ -25,3 +30,4 @@ void say_hello()
 {
     std::cout<<"Hello World!\n";
 }
+
