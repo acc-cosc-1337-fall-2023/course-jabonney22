@@ -2,6 +2,10 @@
 #include<iostream>
 #include<stdlib.h>//access rand() function
 
+//class header guards
+#ifndef BANK_ACCOUNT_H
+#define BANK_ACCOUNT_H
+
 class BankAccount{
 
 friend void show_balance(BankAccount& account);
@@ -20,5 +24,9 @@ private:// access specifier-onlly this class can access function or varaibles th
     void get_balance_from_db();
 };
 
+
+
 void say_hello();
+
+#endif
 
