@@ -5,6 +5,8 @@ using std::cout;
 
 bool TicTacToe::game_over(){
 
+    if 
+
     return check_board_full();
 }
 
@@ -29,6 +31,7 @@ void TicTacToe::display_board() const{
 
     }
 }
+
 //private functions
 
 void TicTacToe::clear_board(){
@@ -63,3 +66,10 @@ bool TicTacToe::check_board_full(){
 
     return true;
 }
+
+void TicTacToe::set_winner(){
+
+    
+}
+
+
