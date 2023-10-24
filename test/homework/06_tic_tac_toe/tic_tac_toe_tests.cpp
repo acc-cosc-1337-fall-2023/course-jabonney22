@@ -26,8 +26,6 @@ TEST_CASE("Test if the board is full"){
 	REQUIRE(game.game_over() == false);
 	game.mark_board(8);
 	REQUIRE(game.game_over() == true);
-
-
 	REQUIRE(game.game_over() == true);
 }
 
