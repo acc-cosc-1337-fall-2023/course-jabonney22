@@ -1,7 +1,7 @@
 //bank_account.cpp
 #include "bank_account.h"
 
-using std :: cout;
+using std::cout;
 
 void BankAccount::deposit(int amount)
 {
@@ -19,15 +19,14 @@ void BankAccount::withdraw(int amount)
     }
 }
 
-void BankAccount::get_balance_from_db(){
-
-    balance = rand() % 100000 + 1;
+void BankAccount::get_balance_from_db()
+{
+    balance = rand() % 10000 + 1;
 }
 
-//firend class
-void show_balance(BankAccount& account){
-
-    
+//friend class 
+void show_balance(const BankAccount& account)
+{
     cout<<"Friend show balance: "<<account.balance<<"\n";
 }
 
@@ -38,4 +37,3 @@ void say_hello()
 {
     std::cout<<"Hello World!\n";
 }
-
