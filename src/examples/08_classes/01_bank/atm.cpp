@@ -1,29 +1,28 @@
 //atm.cpp
 #include "atm.h"
+using std::cin; using std::cout;
 
-using std::cout; using std::cin;
-
-void ATM::display_balance(){
-
-    cout<<"ATM balance: "<<account.get_balance()<<"\n";
+void ATM::display_balance()
+{
+    cout<<"ATM balance: "<<account->get_balance()<<"\n\n";
 }
 
-void ATM::make_deposit(){
-
-    auto amount = 0;
+void ATM::make_deposit()
+	@@ -14,15 +14,15 @@ void ATM::make_deposit()
     cout<<"Enter amount to deposit: ";
     cin>>amount;
 
-    account.deposit(amount);
+    account->deposit(amount);
 }
 
-void ATM::make_withdrawal(){
-
+void ATM::make_withdrawal()
+{
     auto amount = 0;
     cout<<"Enter withdrawal amount: ";
     cin>>amount;
-    account.withdraw(amount);
+    account->withdraw(amount);
 }
+
 //free functions not part of the atm class
 void display_menu()
 {
@@ -32,23 +31,18 @@ void display_menu()
     cout<<"3-Display Balance\n";
     cout<<"4-Exit\n";
 }
-
 void run_menu(ATM& atm)
 {
     auto option = 0;
-
     do
     {
         display_menu();
-
         cout<<"Enter menu option: ";
         cin>>option;
         handle_menu_option(option, atm);
-
     } while (option != 4);
-
+    
 }
-
 void handle_menu_option(int option, ATM& atm)
 {
     switch (option)
@@ -65,7 +59,7 @@ void handle_menu_option(int option, ATM& atm)
     case 4:
         cout<<"Exiting...\n";
         break;
-
+    
     default:
         cout<<"Invalid option...\n";
         break;
