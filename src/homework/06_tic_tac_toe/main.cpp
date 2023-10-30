@@ -1,5 +1,6 @@
 
 #include "tic_tac_toe.h"
+#include "tic_tac_toe.cpp"
 #include <iostream>
 #include<string>
 
@@ -27,13 +28,28 @@ int main()
 			cin>>position;
 			game.mark_board(position);
 			game.display_board();
+
 		}
 
-		cout<< "Play again? Enter 'y' or 'Y' ";
-		cin>>user_choice;
+	game.display_board();
+    std::string winner = game.get_winner();
+    if (winner == "C") {
+        cout << "It's a tie!" <<"\n";
+    } else {
+        cout << winner << " wins!" <<"\n";
+    }
 
+
+        cout << "Play again? (y/n): ";
+        cin >> user_choice;
+
+    return 0;
+
+		
 	}while(user_choice == 'y' || user_choice == 'Y');
 
 	return 0;
 }
+
+
 
