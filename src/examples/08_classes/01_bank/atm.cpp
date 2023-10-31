@@ -1,26 +1,30 @@
 //atm.cpp
 #include "atm.h"
 using std::cin; using std::cout;
-
 void ATM::display_balance()
 {
     cout<<"ATM balance: "<<account->get_balance()<<"\n\n";
 }
-
 void ATM::make_deposit()
-	@@ -14,15 +14,15 @@ void ATM::make_deposit()
+{
+    auto amount = 0;
     cout<<"Enter amount to deposit: ";
     cin>>amount;
-
     account->deposit(amount);
 }
-
 void ATM::make_withdrawal()
 {
     auto amount = 0;
     cout<<"Enter withdrawal amount: ";
     cin>>amount;
     account->withdraw(amount);
+}
+
+void ATM::scan_card()
+{
+    account_index = rand() % accounts.size();
+    cout<<"index: "<<account_index<<"\n";
+    account = accounts[account_index];
 }
 
 //free functions not part of the atm class
@@ -34,6 +38,9 @@ void display_menu()
 void run_menu(ATM& atm)
 {
     auto option = 0;
+
+    atm.scan_card();
+
     do
     {
         display_menu();
