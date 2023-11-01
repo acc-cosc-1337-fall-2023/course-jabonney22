@@ -1,14 +1,31 @@
 //cpp
 #include "tic_tac_toe.h"
+#include<iostream>
+#include<vector>
+#include<string>
 
 using std::cout; 
 
 
 bool TicTacToe::game_over(){
-
-   return check_board_full();
     
+    if (check_column_win() == true || check_row_win() ==  true || check_diagonal_win() == true) {
+            return true;
+    } 
+    
+    else if (check_board_full() == true && check_column_win() == false && check_row_win() ==  false && check_diagonal_win() == false) {
+            winner = "C";
+            return true;
+    }
 
+    else{
+
+        if(get_winner() != "X" || get_winner() != "O" || get_winner() != "C" || !check_board_full()){
+
+        return false;
+
+        }
+    }
 }
 
 void TicTacToe::start_game(std::string first_player){
@@ -61,14 +78,13 @@ void TicTacToe::set_next_player(){
 
 bool TicTacToe::check_board_full(){
 
-    for(long unsigned int i = 1; i < pegs.size(); i++){
+    for( const std::string& peg : pegs){
 
-        if(pegs[i] == " "){
+        if(peg == " "){
             return false;
         }
     }
 
-    game_over();
     return true;
 }
 
@@ -77,11 +93,11 @@ bool TicTacToe::check_column_win(){
     for(int i = 0 ; i < 3; i++ ){
         if(pegs[i] == winner && pegs[i+3] == winner && pegs[i+6] == winner){
 
-
+            set_winner();
         }
     }
 
-    return false;
+    return true;
 }
 
 bool TicTacToe::check_diagonal_win(){
@@ -90,12 +106,13 @@ bool TicTacToe::check_diagonal_win(){
 
          if ((pegs[0] == winner && pegs[4] == winner && pegs[8] == winner) ||
             (pegs[2] == winner && pegs[4] == winner && pegs[6] == winner)){
-            return true;
+
+            set_winner();
 
         }
     }
 
-    return false;
+    return true;
 }
 
 bool TicTacToe::check_row_win(){
@@ -103,12 +120,12 @@ bool TicTacToe::check_row_win(){
     for(int i = 0 ; i < 9; i+=3 ){
         if(pegs[i] == winner && pegs[i+3] == winner && pegs[i+6] == winner){
 
+        set_winner();
 
-            return true;
         }
     }
 
-    return false;
+    return true;
 }
 
 void TicTacToe::set_winner(){
@@ -122,6 +139,7 @@ void TicTacToe::set_winner(){
         winner == "X";
     }
 }
+
 
 
 

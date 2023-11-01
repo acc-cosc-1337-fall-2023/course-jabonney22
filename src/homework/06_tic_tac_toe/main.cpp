@@ -1,6 +1,4 @@
-
 #include "tic_tac_toe.h"
-#include "tic_tac_toe.cpp"
 #include <iostream>
 #include<string>
 
@@ -11,11 +9,11 @@ int main()
 {
 	TicTacToe game;
 	string first_player;
-	char user_choice = 'y';
+	char user_choice;
 
 	do{
 
-		cout<<"enter first player: ";
+		cout<<"Enter first player (X/O): ";
 		cin>>first_player;
 
 		game.start_game(first_player);
@@ -31,13 +29,20 @@ int main()
 
 		}
 
-	game.display_board();
-    std::string winner = game.get_winner();
-    if (winner == "C") {
+		game.display_board();
+    	std::string winner = game.get_winner();
+
+    	if (winner == "C") {
         cout << "It's a tie!" <<"\n";
-    } else {
+
+		game.game_over();
+   		 } 
+		 
+		else {
+
         cout << winner << " wins!" <<"\n";
-    }
+		game.game_over();
+   		 }
 
 
         cout << "Play again? (y/n): ";
@@ -50,6 +55,8 @@ int main()
 
 	return 0;
 }
+
+
 
 
 
