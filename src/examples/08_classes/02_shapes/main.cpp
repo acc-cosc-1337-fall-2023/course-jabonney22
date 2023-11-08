@@ -13,9 +13,13 @@ iterate with auto
 
 int main() 
 {
+	Shape* shape = new Circle();
+	shape->draw();
+	delete shape;
 
-	Circle c;
-	c.draw();
+	shape = new Line();
+	shape->draw();
+	delete shape;
 
 	return 0;
 }
