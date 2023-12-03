@@ -1,33 +1,52 @@
 #include "tic_tac_toe.h"
+#include "tic_tac_toe_3.h"
+#include "tic_tac_toe_4.h"
 #include "tic_tac_toe_manager.h"
 #include <iostream>
 #include<string>
 
 using std::cout; using std::cin; using std::string;
+using std::unique_ptr; using std::make_unique;
 
 
 int main(){
 	TicTacToeManager manager;
-	TicTacToe game;
+	unique_ptr<TicTacToe> game;
 	string first_player;
 	char user_choice;
 
 	do{
+		auto game_type = 0;
+
+		cout<<"Enter game type(Enter 3 or 4): ";
+		cin>>game_type;
+
+		if(game_type == 3){
+
+			game = make_unique<TicTacToe3>();
+
+		}
+		else{
+
+			game = make_unique<TicTacToe4>();
+
+		}
+
 		cout<<"Enter first player(X/O): ";
 		cin>>first_player;
 
-		game.start_game(first_player);
+		game->start_game(first_player);
 
 		int position;
 
-		while(!game.game_over()){
+		while(!game->game_over()){
 			cout<<"Enter a position: ";
 			cin>>position;
-			game.mark_board(position);
-			game.display_board();
+			game->mark_board(position);
+			game->display_board();
 			
 		}
-            std::string winner = game.get_winner();
+            std::string winner = game->get_winner();
 			manager.save_game(game);
 
         if (winner == "X" || winner == "O") {
